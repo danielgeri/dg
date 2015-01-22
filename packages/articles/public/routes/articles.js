@@ -52,6 +52,13 @@ angular.module('mean.articles').config(['$stateProvider',
         resolve: {
           loggedin: checkLoggedin
         }
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'articles/views/view.html',
+        resolve: {
+          loggedin: checkLoggedin
+        }
       });
   }
 ]);

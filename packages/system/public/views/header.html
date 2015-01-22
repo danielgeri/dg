@@ -1,14 +1,14 @@
 <div class="page-header" data-ng-controller="HeaderController as header">
   <div class="menu-wrapper">
-    <a href="#" class="menu-icon" ng-click="theme.toggleMenu()">Menu</a>
+    <a class="menu-icon" ng-class="theme.isMenuOpen() ? 'menu-icon-open' : 'menu-icon-closed'" ng-click="theme.toggleMenu()">Menu</a>
     <ul class="menu" ng-class="theme.isMenuOpen() ? 'open' : 'closed'" >
-      <li><a href="#" ng-class="{about:theme.isHovered('about')}" ng-mouseover="theme.hoverOver('about')" ng-mouseleave="theme.reset()">About</a></li>
-      <li><a href="#" ng-class="{work:theme.isHovered('work')}" ng-mouseover="theme.hoverOver('work')" ng-mouseleave="theme.reset()">Work</a></li>
-      <li><a href="#" ng-class="{blog:theme.isHovered('blog')}" ng-mouseover="theme.hoverOver('blog')" ng-mouseleave="theme.reset()">Blog</a></li>
-      <li><a href="#" ng-class="{contact:theme.isHovered('contact')}" ng-mouseover="theme.hoverOver('contact')" ng-mouseleave="theme.reset()">Contact</a></li>
+      <li><a href="/#!/about" ng-class="{about:theme.isHovered('about')}" ng-mouseover="theme.hoverOver('about')" ng-mouseleave="theme.reset()" ng-click="theme.toggleMenu()">About</a></li>
+      <li><a href="#" ng-class="{work:theme.isHovered('work')}" ng-mouseover="theme.hoverOver('work')" ng-mouseleave="theme.reset()" ng-click="theme.toggleMenu()">Work</a></li>
+      <li><a href="#" ng-class="{blog:theme.isHovered('blog')}" ng-mouseover="theme.hoverOver('blog')" ng-mouseleave="theme.reset()" ng-click="theme.toggleMenu()">Blog</a></li>
+      <li><a href="mailto:danielgeri@gmail.com?Subject=Hi" ng-class="{contact:theme.isHovered('contact')}" ng-mouseover="theme.hoverOver('contact')" ng-mouseleave="theme.reset()">Contact</a></li>
     </ul>
   </div>
-  <div class="logo">
+  <a href="/#!/" class="logo">
     danielgeri.com
-  </div>
+  </a>
 </div>

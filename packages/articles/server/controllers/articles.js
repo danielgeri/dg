@@ -95,3 +95,11 @@ exports.all = function(req, res) {
 
   });
 };
+
+exports.findAbout = function(req, res, next) {
+  Article.findOne({title:'About'}, function(err, article) {
+    if (err) return next(err);
+    if (!article) return next(new Error('Failed to load article ' + '54753637d22acd0000c11341'));
+    res.json(article);
+  });
+};

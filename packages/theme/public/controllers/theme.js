@@ -36,5 +36,6 @@ angular.module('mean.theme')
       this.toggleMenu = function() {
         this.menuOpen = !this.menuOpen;
       };
+
     }
   ]);

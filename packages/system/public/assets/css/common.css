@@ -5,7 +5,7 @@ body {
 }
 
 .wrapper {
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -20,7 +20,6 @@ body {
 .menu-wrapper {
     float:left;
     width:70px;
-    background-color: white;
     position: relative;
 }
 
@@ -29,12 +28,21 @@ body {
     height:70px;
     background-image: url('/system/assets/img/menu.png');
     background-repeat: no-repeat;
-    background-position: 22px 25px;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     border-right: 1px solid lightgray;
     display: block;
+}
+
+.menu-icon-closed {
+    background-position: 22px 25px;
+    background-color: white;
+}
+
+.menu-icon-open {
+    background-position: 22px -25px;
+    background-color: black;
 }
 
 .menu {
@@ -61,14 +69,14 @@ body {
 }
 
 .open {
-    transition: .8s;
+    transition: .6s;
     top: 71px;
     left: 0;
     background-color: white;
 }
 
 .closed {
-    transition: .8s;
+    transition: .6s;
     top: 71px;
     left: -141px;
     background-color: lightgray;
@@ -79,24 +87,24 @@ body {
 }*/
 
 .about {
-    transition:.5s;
+    transition:.2s;
     background-color: #A75499;
 }
 
 .work {
-    transition:.5s;
+    transition:.2s;
     background-color: #21B258;
     
 }
 
 .blog {
-    transition:.5s;
+    transition:.2s;
     background-color: #F9D805;
     
 }
 
 .contact {
-    transition:.5s;
+    transition:.2s;
     background-color: #F15F35;
     
 }
@@ -132,22 +140,22 @@ body {
 }
 
 .menu-label-right {
-    transition: .8s;
+    transition: .6s;
     left:70px;
 }
 
 .menu-label-center {
-    transition: .8s;
+    transition: .6s;
     left:0;
 }
 
 .light-gray {
-    transition:.5s;
+    transition:.2s;
     color: lightgray;
 }
 
 .white {
-    transition:.5s;
+    transition:.2s;
     color: white;
 }
 

@@ -66,11 +66,19 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
     };
 
     $scope.findOne = function() {
-      Articles.get({
-        articleId: $stateParams.articleId
-      }, function(article) {
+      var art;
+      if($location.$$path === '/about') {
+        art = '';
+      } else {
+        art = $stateParams.articleId;
+      }
+
+      Articles.get({ 
+        articleId: art
+      },function(article) {
         $scope.article = article;
       });
     };
+
   }
 ]);
